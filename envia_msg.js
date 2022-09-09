@@ -10,20 +10,16 @@ client.on('qr', (qr) => {
 });
 
 client.on('ready', () => {
-    console.log('Client is ready!');
-      // Number where you want to send the message.
- const number = "+554298234079";
-
- // Your message.
-const text = 'Emoji Test -> 😍😍😍😍 '+"Oi amor, este é um teste feito pelo robo whats app"+' Emoji Test -> 🥰🥰🥰🥰🥰🥰';
-
- // Getting chatId from the number.
- // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
-const chatId = number.substring(1) + "@c.us";
-
-// Sending message.
-client.sendMessage(chatId, text);
-
+        console.log('Client is ready!');
+        // Number where you want to send the message.
+        const number = "+554298234079";
+        // Your message.
+        const text = 'Emoji Test -> 😍😍😍😍 '+"Oi amor, este é um teste feito pelo robo whats app"+' Emoji Test -> 🥰🥰🥰🥰🥰🥰';
+        // Getting chatId from the number.
+        // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
+        const chatId = number.substring(1) + "@c.us";
+        // Sending message.
+        client.sendMessage(chatId, text);
 });
 
 
