@@ -15,7 +15,7 @@ client.on('ready', () => {
  const number = "+55998234079";
 
  // Your message.
-const text = '👍'+"Oi amor, este é um teste feito pelo robo whats app";
+const text = 'Emoji Test -> 😍😍😍😍 '+"Oi amor, este é um teste feito pelo robo whats app"+' Emoji Test -> 🥰🥰🥰🥰🥰🥰';
 
  // Getting chatId from the number.
  // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
