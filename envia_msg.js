@@ -5,6 +5,7 @@ const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
     console.log('QR RECEIVED', qr);
+    qrcode.generate(qr, {small: true});
 });
 
 client.on('ready', () => {
