@@ -15,7 +15,7 @@ client.on('ready', () => {
  const number = "+5511981351963";
 
  // Your message.
-const text = "RPA Robo whatsapp para prospecção.estou funcinando em uma VPS";
+const text = ":bae :bae :bae :bae :bae :bae Oi amor, este é um teste feito pelo robo whats app";
 
  // Getting chatId from the number.
  // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
