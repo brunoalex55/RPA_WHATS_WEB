@@ -1,7 +1,16 @@
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
+const lineByLine = require('n-readlines');
 
 const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
+
+const liner = new lineByLine('prospect.txt');
+let line;
+ 
+while (line = liner.next()) {
+    console.log(line);
+}
+
 
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
