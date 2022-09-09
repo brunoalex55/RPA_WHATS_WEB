@@ -12,10 +12,10 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
     console.log('Client is ready!');
       // Number where you want to send the message.
- const number = "+5511981351963";
+ const number = "+5598234079";
 
  // Your message.
-const text = ":bae :bae :bae :bae :bae :bae Oi amor, este é um teste feito pelo robo whats app";
+const text = '👍'+"Oi amor, este é um teste feito pelo robo whats app";
 
  // Getting chatId from the number.
  // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
