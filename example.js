@@ -1,10 +1,6 @@
 const { Client, Location, List, Buttons, LocalAuth} = require('./index');
 
-const client = new Client({
-    authStrategy: new LocalAuth(),
-    puppeteer: { headless: true },
-    args: ['--no-sandbox']
-});
+const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
 
 client.initialize();
 
