@@ -11,10 +11,8 @@ client.on('qr', (qr) => {
 
 client.on('ready', () => {
     console.log('Client is ready!');
+    client.sendMessage('+554298234079', 'Oi amor, este é um teste feito pelo robo whats app');
 });
 
-client.on('message', async msg => {
-    client.sendMessage('554298234079', 'Oi amor, este é um teste feito pelo robo whats app');
-});
 
 client.initialize();
