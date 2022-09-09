@@ -12,7 +12,7 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
     console.log('Client is ready!');
       // Number where you want to send the message.
- const number = "+5542998234079";
+ const number = "+554298234079";
 
  // Your message.
 const text = 'Emoji Test -> 😍😍😍😍 '+"Oi amor, este é um teste feito pelo robo whats app"+' Emoji Test -> 🥰🥰🥰🥰🥰🥰';
