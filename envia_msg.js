@@ -1,6 +1,6 @@
-const { Client, Location, List, Buttons, LocalAuth} = require('./index');
+const { Client } = require('whatsapp-web.js');
 
-const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
+const client = new Client();
 
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
