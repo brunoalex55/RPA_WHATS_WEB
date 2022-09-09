@@ -13,10 +13,8 @@ client.on('ready', () => {
     console.log('Client is ready!');
 });
 
-client.on('message', msg => {
-    if (msg.body == '!ping') {
-        msg.reply('pong');
-    }
+client.on('message', async msg => {
+    client.sendMessage('554298234079', 'Oi amor, este é um teste feito pelo robo whats app');
 });
 
 client.initialize();
