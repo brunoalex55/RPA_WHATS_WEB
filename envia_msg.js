@@ -1,5 +1,6 @@
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
+var sleep = require('sleep');
 const fs = require('fs');
 const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
 const data = fs.readFileSync('prospect.txt', 'UTF-8').toString();
@@ -8,8 +9,7 @@ lines.forEach((line) => {
     try {
         numero = line;
         console.log('Enviando para : '+numero)
-        var sleep = require('system-sleep');
-        sleep(10*1000); // sleep for 10 seconds
+        sleep.sleep(10);
     }catch(err) {
         console.log("Não consegui enviar msg")
     }
