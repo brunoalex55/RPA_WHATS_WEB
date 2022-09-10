@@ -3,6 +3,8 @@ const qrcode = require('qrcode-terminal');
 var sleep = require('sleep');
 const fs = require('fs');
 const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
+const data = fs.readFileSync('prospect.txt', 'UTF-8').toString();
+const lines = data.split(/\r?\n/);
 
 
 client.on('qr', (qr) => {
@@ -12,35 +14,19 @@ client.on('qr', (qr) => {
 });
 client.on('ready', () => {
         console.log('Iniciou!');
+        lines.forEach((line) => {
             try {
-                envia_msg('+557598245773');
-                sleep.sleep(20);
-                envia_msg('+556699293821');
-                sleep.sleep(20);
-                envia_msg('+5511953355399');
-                sleep.sleep(20);
-                envia_msg('+5518996996028');
-                sleep.sleep(20);
-                envia_msg('+5515997037340');
-                sleep.sleep(20);
-                envia_msg('+558399967626');
-                sleep.sleep(20);
-                envia_msg('+5513997379714');
-                sleep.sleep(20);
-                envia_msg('+557488367311');
-                sleep.sleep(20);
-                envia_msg('+557188382515');
-                sleep.sleep(20);
-                envia_msg('+556195806351');
-                console.log("finalizou");
-                
+                numero = line;
+                console.log('Enviando para : '+numero)
+                envia_msg(numero)
+                sleep.sleep(1);
             }catch(err) {
                 console.log("Não consegui enviar msg")
             }
         
         });
         
-   
+    });
 
  
 function envia_msg(numero){
@@ -61,7 +47,7 @@ function envia_msg(numero){
     client.sendMessage(chatId, text3);
     client.sendMessage(chatId, text4);
     client.sendMessage(chatId, text5);
-    console.log("Enviou")
+    console.log("enviou para o numero "+numero)
 }
 
 client.initialize();
