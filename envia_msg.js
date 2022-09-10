@@ -10,6 +10,7 @@ client.on('qr', (qr) => {
     console.log('QR RECEIVED', qr);
     qrcode.generate(qr, {small: true});
 });
+
 client.on('ready', () => {
         console.log('Iniciou!');
         lines.forEach((line) => {
