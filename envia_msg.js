@@ -5,8 +5,6 @@ const fs = require('fs');
 const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
 const data = fs.readFileSync('prospect.txt', 'UTF-8').toString();
 const lines = data.split(/\r?\n/);
-
-
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
     console.log('QR RECEIVED', qr);
