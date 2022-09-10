@@ -29,7 +29,7 @@ client.on('ready', () => {
             try {
                 numero = line;
                 console.log('Enviando para : '+numero)
-                await sleep(10000)
+                
             }catch(err) {
                 console.log("Não consegui enviar msg")
             }
