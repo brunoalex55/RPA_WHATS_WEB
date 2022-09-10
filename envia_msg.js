@@ -4,14 +4,16 @@ const fs = require('fs');
 const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
 const data = fs.readFileSync('prospect.txt', 'UTF-8').toString();
 const lines = data.split(/\r?\n/);
-/*
 lines.forEach((line) => {
-    time_sleep = 10 * 1000
-    setTimeout(function() {
-        console.log(line);
-    },time_sleep);
+    try {
+        numero = line;
+        console.log('Enviando para : '+numero)
+        await sleep(10000)
+    }catch(err) {
+        console.log("Não consegui enviar msg")
+    }
+
 });
-*/
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
     console.log('QR RECEIVED', qr);
@@ -20,15 +22,15 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
         console.log('Iniciou!');
         lines.forEach((line) => {
-                try {
-                    numero = line;
-                    console.log('Enviando para : '+numero)
-                    await sleep(10000)
-                }catch(err) {
-                    console.log("Não consegui enviar msg")
-                }
-            
-        });
+            try {
+                numero = line;
+                console.log('Enviando para : '+numero)
+                await sleep(10000)
+            }catch(err) {
+                console.log("Não consegui enviar msg")
+            }
+        
+    });
         
     });
 
