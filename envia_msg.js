@@ -8,10 +8,8 @@ lines.forEach((line) => {
     try {
         numero = line;
         console.log('Enviando para : '+numero)
-        sleep(10000).then(() => {
-            // This will execute 10 seconds from now
-            console.log("aguardando")
-          });
+        var sleep = require('system-sleep');
+        sleep(10*1000); // sleep for 10 seconds
     }catch(err) {
         console.log("Não consegui enviar msg")
     }
