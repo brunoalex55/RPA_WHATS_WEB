@@ -8,12 +8,13 @@ lines.forEach((line) => {
     try {
         numero = line;
         console.log('Enviando para : '+numero)
-        await sleep(10000)
+        await new Promise(resolve => setTimeout(resolve, 5000));
     }catch(err) {
         console.log("Não consegui enviar msg")
     }
 
 });
+
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
     console.log('QR RECEIVED', qr);
@@ -34,13 +35,7 @@ client.on('ready', () => {
         
     });
 
-    function sleep(ms) {
-        return new Promise((resolve) => {
-          setTimeout(resolve, ms);
-          console.log("Aguardando para enviar proxima")
-        });
-      }
-
+ 
 function envia_msg(numero){
     // Number where you want to send the message.
     const number = numero;
