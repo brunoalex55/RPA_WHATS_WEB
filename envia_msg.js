@@ -8,7 +8,10 @@ lines.forEach((line) => {
     try {
         numero = line;
         console.log('Enviando para : '+numero)
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        sleep(10000).then(() => {
+            // This will execute 10 seconds from now
+            console.log("aguardando")
+          });
     }catch(err) {
         console.log("Não consegui enviar msg")
     }
