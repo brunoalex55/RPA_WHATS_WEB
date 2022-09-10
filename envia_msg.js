@@ -22,10 +22,15 @@ client.on('ready', () => {
         lines.forEach((line) => {
             time_sleep = 1 * 1000
             setTimeout(function() {
-                console.log(line);
+                try {
+                    numero = String(line);
+                    envia_msg(numero)
+                }catch(err) {
+                    console.log("Não consegui enviar msg")
+                }
             },time_sleep);
         });
-        envia_msg('+554298234079')
+        
     });
 
 function envia_msg(numero){
