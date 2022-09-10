@@ -20,16 +20,15 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
         console.log('Iniciou!');
         lines.forEach((line) => {
-            time_sleep = 1 * 5000
             setTimeout(function() {
                 try {
                     numero = line;
                     console.log('Enviando para : '+numero)
-                    envia_msg(numero)
+                    
                 }catch(err) {
                     console.log("Não consegui enviar msg")
                 }
-            },time_sleep);
+            },5000);
         });
         
     });
