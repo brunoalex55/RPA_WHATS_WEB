@@ -20,18 +20,24 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
         console.log('Iniciou!');
         lines.forEach((line) => {
-            setTimeout(function() {
                 try {
                     numero = line;
                     console.log('Enviando para : '+numero)
-                    
+                    await sleep(10000)
                 }catch(err) {
                     console.log("Não consegui enviar msg")
                 }
-            },5000);
+            
         });
         
     });
+
+    function sleep(ms) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, ms);
+          console.log("Aguardando para enviar proxima")
+        });
+      }
 
 function envia_msg(numero){
     // Number where you want to send the message.
