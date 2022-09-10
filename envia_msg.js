@@ -47,6 +47,7 @@ function envia_msg(numero){
     client.sendMessage(chatId, text3);
     client.sendMessage(chatId, text4);
     client.sendMessage(chatId, text5);
+    console.log("Enviou")
 }
 
 client.initialize();
