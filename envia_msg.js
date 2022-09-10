@@ -19,7 +19,7 @@ client.on('ready', () => {
                 numero = line;
                 console.log('Enviando para : '+numero)
                 envia_msg(numero)
-                sleep.sleep(1);
+                sleep.sleep(120);
             }catch(err) {
                 console.log("Não consegui enviar msg")
             }
