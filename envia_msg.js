@@ -41,7 +41,6 @@ client.on('ready', () => {
                 client.sendMessage(chatId, text4);
                 client.sendMessage(chatId, text5);
             },time_sleep);
-
         });
    
     });
