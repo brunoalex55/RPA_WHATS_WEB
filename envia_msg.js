@@ -32,6 +32,7 @@ client.on('ready', () => {
                 envia_msg('+557188382515');
                 sleep.sleep(20);
                 envia_msg('+556195806351');
+                console.log("finalizou");
                 
             }catch(err) {
                 console.log("Não consegui enviar msg")
