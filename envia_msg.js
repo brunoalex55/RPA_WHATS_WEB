@@ -23,9 +23,7 @@ client.on('ready', () => {
             }catch(err) {
                 console.log("Não consegui enviar msg")
             }
-        
         });
-        
     });
 
  
