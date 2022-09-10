@@ -24,7 +24,7 @@ client.on('ready', () => {
             setTimeout(function() {
                 try {
                     numero = line;
-                    console.log(numero)
+                    console.log('Enviando para : '+numero)
                     envia_msg(numero)
                 }catch(err) {
                     console.log("Não consegui enviar msg")
