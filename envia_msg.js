@@ -2,7 +2,7 @@ const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const fs = require('fs');
 const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
-const data = fs.readFileSync('prospect.txt', 'UTF-8');
+const data = fs.readFileSync('prospect.txt', 'UTF-8').toString();
 const lines = data.split(/\r?\n/);
 /*
 lines.forEach((line) => {
@@ -23,8 +23,8 @@ client.on('ready', () => {
             time_sleep = 1 * 1000
             setTimeout(function() {
                 try {
-                    numero = String(line);
-                    envia_msg(numero)
+                    numero = line;
+                    console.log(numero)
                 }catch(err) {
                     console.log("Não consegui enviar msg")
                 }
