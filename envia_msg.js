@@ -9,7 +9,7 @@ client.on('qr', (qr) => {
     console.log('QR RECEIVED', qr);
     qrcode.generate(qr, {small: true});
 });
-client.on('ready', () => {
+client.on('ready', async () => {
         console.log('Iniciou!');
         var array = fs.readFileSync('prospect.txt').toString().split("\n"); //reading file
         for (i in array) {
