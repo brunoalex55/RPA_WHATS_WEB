@@ -14,6 +14,7 @@ client.on('ready', () => {
         console.log('Iniciou!');
         var array = fs.readFileSync('prospect.txt').toString().split("\n"); //reading file
         for (i in array) {
+            console.log("enviando");
             numero = array[i];
             console.log(numero);
             console.log('Enviando para : '+numero)
@@ -51,5 +52,4 @@ function envia_msg(numero){
     client.sendMessage(chatId, text5);
     console.log("enviou para o numero "+numero)
 }
-
 client.initialize();
