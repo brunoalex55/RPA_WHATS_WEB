@@ -17,7 +17,7 @@ client.on('ready', () => {
             numero = array[i];
             console.log('Enviando para : '+numero)
             envia_msg(array[i])
-            await sleep.sleep(20);        }
+            await sleep.sleep(5);        }
     });
 
  
