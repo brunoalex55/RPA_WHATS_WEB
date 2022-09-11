@@ -12,11 +12,13 @@ client.on('qr', (qr) => {
 
 client.on('ready', () => {
         console.log('Iniciou!');
+        sleep.sleep(300)
+
+        console.log('iniciou')
         var array = fs.readFileSync('prospect.txt').toString().split("\n"); //reading file
         for (i in array) {
             console.log("enviando");
             numero = array[i];
-            console.log(numero);
             console.log('Enviando para : '+numero)
             envia_msg(array[i])
             sleep.sleep(2)
