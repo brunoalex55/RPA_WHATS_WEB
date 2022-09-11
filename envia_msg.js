@@ -12,21 +12,21 @@ client.on('qr', (qr) => {
 
 client.on('ready', () => {
         console.log('Iniciou!');
-        const saved = [];
         var array = fs.readFileSync('prospect.txt').toString().split("\n"); //reading file
         for (i in array) {
-            console.log(array[i]);
-            saved.push(array[i].substring(1)); //array with number 
+            numero = array[i];
+
+            console.log(numero);
+            console.log('Enviando para : '+numero)
+            envia_msg(array[i])
+            sleep.sleep(2)
         }
-        const contacts = [];
-        for (var i = 0; i < saved.length; i++) {
-            contacts.push(await client.getContactById(saved[i] + '@c.us')); 
-        }
-        console.log(contacts);        
+                
     });
 
  
 function envia_msg(numero){
+    console.log(numero)
     // Number where you want to send the message.
     const number = numero;
     // Your message.
@@ -38,6 +38,7 @@ function envia_msg(numero){
     // Getting chatId from the number.
     // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
     const chatId = number.substring(1) + "@c.us";
+    console.log(chatId);
     // Sending message.
     sleep.sleep(1);
     client.sendMessage(chatId, text);
