@@ -2,28 +2,23 @@ const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 var sleep = require('sleep');
 const fs = require('fs');
-const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
 
+const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
     console.log('QR RECEIVED', qr);
     qrcode.generate(qr, {small: true});
 });
-
 client.on('ready', () => {
         console.log('Iniciou!');
-        sleep.sleep(300)
-
-        console.log('iniciou')
         var array = fs.readFileSync('prospect.txt').toString().split("\n"); //reading file
         for (i in array) {
             console.log("enviando");
             numero = array[i];
             console.log('Enviando para : '+numero)
             envia_msg(array[i])
-            sleep.sleep(2)
+            sleep.sleep(20)
         }
-                
     });
 
  
