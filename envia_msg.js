@@ -15,11 +15,14 @@ client.on('ready', () => {
         var array = fs.readFileSync('prospect.txt').toString().split("\n"); //reading file
         for (i in array) {
             console.log(array[i]);
-            console.log('Enviando para : '+array[i])
-            envia_msg(array[i])
-            sleep.sleep(2)
+            saved.push(array[i].substring(1)); //array with number 
         }
-                
+        const contacts = [];
+        for (var i = 0; i < saved.length; i++) {
+            contacts.push(await client.getContactById(saved[i] + '@c.us')); 
+        
+        }
+        console.log(contacts);        
     });
 
  
