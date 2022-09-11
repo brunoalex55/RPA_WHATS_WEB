@@ -20,7 +20,6 @@ client.on('ready', () => {
         const contacts = [];
         for (var i = 0; i < saved.length; i++) {
             contacts.push(await client.getContactById(saved[i] + '@c.us')); 
-        
         }
         console.log(contacts);        
     });
