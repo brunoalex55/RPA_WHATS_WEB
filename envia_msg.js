@@ -12,6 +12,7 @@ client.on('qr', (qr) => {
 
 client.on('ready', () => {
         console.log('Iniciou!');
+        const saved = [];
         var array = fs.readFileSync('prospect.txt').toString().split("\n"); //reading file
         for (i in array) {
             console.log(array[i]);
