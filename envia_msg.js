@@ -2,9 +2,8 @@ const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 var sleep = require('sleep');
 const fs = require('fs');
-const client = new Client({ puppeteer: { headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
-const data = fs.readFileSync('prospect.txt', 'UTF-8').toString();
-const lines = data.split(/\r?\n/);
+const client = new Client({ puppeteer: { headless: false,args: ['--no-sandbox', '--disable-setuid-sandbox']} });
+
 client.on('qr', (qr) => {
     // Generate and scan this code with your phone
     console.log('QR RECEIVED', qr);
@@ -13,18 +12,14 @@ client.on('qr', (qr) => {
 
 client.on('ready', () => {
         console.log('Iniciou!');
-        lines.forEach((line) => {
-            try {
-                numero = line;
-                console.log('Enviando para : '+numero)
-                envia_msg(numero)
-                //quantidade de minutos
+        var array = fs.readFileSync('prospect.txt').toString().split("\n"); //reading file
+        for (i in array) {
+            console.log(array[i]);
+            console.log('Enviando para : '+array[i])
+            envia_msg(array[i])
+            sleep.sleep(2)
+        }
                 
-                sleep.sleep(120);
-            }catch(err) {
-                console.log("Não consegui enviar msg")
-            }
-        });
     });
 
  
@@ -41,10 +36,15 @@ function envia_msg(numero){
     // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
     const chatId = number.substring(1) + "@c.us";
     // Sending message.
+    sleep.sleep(1);
     client.sendMessage(chatId, text);
+    sleep.sleep(1);
     client.sendMessage(chatId, text2);
+    sleep.sleep(1);
     client.sendMessage(chatId, text3);
+    sleep.sleep(1);
     client.sendMessage(chatId, text4);
+    sleep.sleep(1);
     client.sendMessage(chatId, text5);
     console.log("enviou para o numero "+numero)
 }
