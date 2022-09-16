@@ -27,36 +27,13 @@ function envia_msg(numero){
     // Number where you want to send the message.
     const number = numero;
     // Your message.
-    const text = 'Seu dia a dia anda estressante e você não consegue ter disposição na cama não é mesmo?\n'+
-    '\n'+
-    'Saiba que  isto é muito mais comum do que você imagina.\n'+
-    '\n'+
-    'Meu nome é Bruno e estou aqui para ajudá-lo com um produto 100% natural e APROVADO PELA ANVISA.\n'+
-    '\n'+
-    'Este produto não tem contra-indicações e melhora em:\n'+
-    '\n'+
-    '✅ Mais disposição no seu dia.\n'+
-    '\n'+
-    '✅ Intensifica os níveis hormonais\n'+
-    '\n'+
-    '\n'+
-    'É altamente eficiente e, diferente dos demais do mercado, ele não influencia só a área do pênis, mas sim no organismo como um todo.\n'+
-    '\n'+
-    '\n'+
-    'Se você é HOMEM, como otimiza o fluxo de sangue na zona pélvica, ele ainda consegue garantir uma ereção máxima, com o aumento do tamanho do pênis, tanto na espessura quanto no comprimento, além de:\n'+
-    '\n'+
-    '✅ Ter ereções mais poderosas \n'+
-    '\n'+
-    '✅ Expandir as dimensões do pênis\n'+
-    '\n'+
-    '✅ Melhorar a sensibilidade da região pélvica à estímulos.\n'+
-    '\n'+
-    '\n'+
-    'Utilize por, no mínimo, 2 meses para que os efeitos cheguem o auge de desempenho.\n'+
-    '\n'+
-    '\n'+
-    'Quero ajudá-lo, me chame aqui, terei o prazer de conversar contigo.\n'+
-    '';
+    const text = 'Olá tudo bem com você?\n'+
+    'Hoje é fato que os problemas do dia a dia, o stress e com o passar dos anos já não somos os mesmos em matéria de virilidade e disposição, não é mesmo.\n'+
+    'Oque mais te incomoda hoje, não ter disposição e desejo para satisfazer sua parceira (o), está desmotivado, o vigor físico e emocional está deixando a desejar?\n'+
+    'Sinceramente você quer viver essa vida até quando\n'+
+    'Se eu disser que posso te ajudar a aumentar os estímulos cerebrais e intensificar o apetite sexual, aumento na potencia das suas ereções e melhora a libido e o desejo sexual, para proporcionar uma vida feliz e completa agradando sua parceira(o) você aceita conhecer? \n'+
+    'Tudo no mais absoluto sigilo e discrição!\n'+
+    'Se a resposta for sim: ME CHAMA AGORA no Chat  !!   👉👉📲📲';
     // Getting chatId from the number.
     // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
     const chatId = number.substring(1) + "@c.us";
