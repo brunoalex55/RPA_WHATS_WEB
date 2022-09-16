@@ -16,7 +16,7 @@ client.on('ready', async () => {
             console.log("enviando");
             numero = array[i];
             console.log('Enviando para : '+numero)
-            envia_msg(array[i])
+            envia_msg('+'array[i])
             await sleep.sleep(5);        
         }
     });
@@ -27,25 +27,42 @@ function envia_msg(numero){
     // Number where you want to send the message.
     const number = numero;
     // Your message.
-    const text = 'Oi tudo bem com você? 💝😊';
-    const text2 = 'Me chamo Trindade sou mãe e empreendedora digital, hoje eu trabalho em casa usando apenas meu celular e internet 😍';
-    const text3 = 'Ajudo pessoas a terem suas vidas transformadas com rendas altamente lucrativas através da internet  🤩';
-    const text4 = 'Se quiser saber mais, responda "quero"  🥰';
-    const text5 = 'Eu terei o maior prazer em fazer um atendimento personalizado para você ❤'
+    const text = 'Seu dia a dia anda estressante e você não consegue ter disposição na cama não é mesmo?\n'+
+    '\n'+
+    'Saiba que  isto é muito mais comum do que você imagina.\n'+
+    '\n'+
+    'Meu nome é Bruno e estou aqui para ajudá-lo com um produto 100% natural e APROVADO PELA ANVISA.\n'+
+    '\n'+
+    'Este produto não tem contra-indicações e melhora em:\n'+
+    '\n'+
+    '✅ Mais disposição no seu dia.\n'+
+    '\n'+
+    '✅ Intensifica os níveis hormonais\n'+
+    '\n'+
+    '\n'+
+    'É altamente eficiente e, diferente dos demais do mercado, ele não influencia só a área do pênis, mas sim no organismo como um todo.\n'+
+    '\n'+
+    '\n'+
+    'Se você é HOMEM, como otimiza o fluxo de sangue na zona pélvica, ele ainda consegue garantir uma ereção máxima, com o aumento do tamanho do pênis, tanto na espessura quanto no comprimento, além de:\n'+
+    '\n'+
+    '✅ Ter ereções mais poderosas \n'+
+    '\n'+
+    '✅ Expandir as dimensões do pênis\n'+
+    '\n'+
+    '✅ Melhorar a sensibilidade da região pélvica à estímulos.\n'+
+    '\n'+
+    '\n'+
+    'Utilize por, no mínimo, 2 meses para que os efeitos cheguem o auge de desempenho.\n'+
+    '\n'+
+    '\n'+
+    'Quero ajudá-lo, me chame aqui, terei o prazer de conversar contigo.\n'+
+    '';
     // Getting chatId from the number.
     // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
     const chatId = number.substring(1) + "@c.us";
     // Sending message.
     sleep.sleep(1);
     client.sendMessage(chatId, text);
-    sleep.sleep(1);
-    client.sendMessage(chatId, text2);
-    sleep.sleep(1);
-    client.sendMessage(chatId, text3);
-    sleep.sleep(1);
-    client.sendMessage(chatId, text4);
-    sleep.sleep(1);
-    client.sendMessage(chatId, text5);
     console.log("enviou para o numero "+numero)
 }
 client.initialize();
