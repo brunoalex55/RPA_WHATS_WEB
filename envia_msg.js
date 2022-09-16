@@ -28,11 +28,17 @@ function envia_msg(numero){
     const number = numero;
     // Your message.
     const text = 'Olá tudo bem com você?\n'+
+    '\n'+
     'Hoje é fato que os problemas do dia a dia, o stress e com o passar dos anos já não somos os mesmos em matéria de virilidade e disposição, não é mesmo.\n'+
+    '\n'+
     'Oque mais te incomoda hoje, não ter disposição e desejo para satisfazer sua parceira (o), está desmotivado, o vigor físico e emocional está deixando a desejar?\n'+
-    'Sinceramente você quer viver essa vida até quando\n'+
+    '\n'+
+    'Sinceramente você quer viver essa vida até quando?\n'+
+    '\n'+
     'Se eu disser que posso te ajudar a aumentar os estímulos cerebrais e intensificar o apetite sexual, aumento na potencia das suas ereções e melhora a libido e o desejo sexual, para proporcionar uma vida feliz e completa agradando sua parceira(o) você aceita conhecer? \n'+
+    '\n'+
     'Tudo no mais absoluto sigilo e discrição!\n'+
+    '\n'+
     'Se a resposta for sim: ME CHAMA AGORA no Chat  !!   👉👉📲📲';
     // Getting chatId from the number.
     // we have to delete "+" from the beginning and add "@c.us" at the end of the number.
