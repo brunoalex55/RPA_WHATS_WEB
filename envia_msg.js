@@ -35,7 +35,7 @@ function envia_msg(numero){
     'Sinceramente você quer viver essa vida até quando.\n'+
     '\n'+
     'Se eu disser que posso te ajudar a aumentar os estímulos cerebrais e intensificar o apetite sexual, aumento na potencia das suas ereções e melhora a libido e o desejo sexual, para proporcionar uma vida feliz e completa.\n'+
-    'SEJA O HERÓI QUE da SUA MULHER! \n'+
+    'SEJA O HERÓI DA SUA MULHER! \n'+
     '\n'+
     'Tudo no mais absoluto sigilo e discrição!\n'+
     '\n'+
